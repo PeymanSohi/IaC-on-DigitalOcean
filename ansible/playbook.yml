@@ -1,0 +1,8 @@
+- name: Configure server
+  hosts: all
+  become: yes
+  tasks:
+    - name: Update APT packages
+      apt:
+        update_cache: yes
+        upgrade: dist
